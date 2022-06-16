@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class ImagesViewController: UIViewController {
     
     @IBOutlet weak var btnReloadImage: UIButton!
@@ -19,30 +19,26 @@ class ImagesViewController: UIViewController {
         didSet{
             catImage.image=nil
             if view.window != nil{// to check if i am on screen
-                fetchImage()
+                loadImage()
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if imageURL==nil{
-            imageURL=URL(string: "https://cdn2.thecatapi.com/images/sDmw9mgHP.png")
-        }
+        if imageURL==nil{fetchImageURL()}
         lblMessage.sizeToFit()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if catImage.image==nil{
-            fetchImage()
-        }
+        if catImage.image==nil{loadImage()}
     }
     
-    private func fetchImage(){
+    private func loadImage(){
         if let url=imageURL{
-//            spinner.startAnimating()
+            //            spinner.startAnimating()
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 let urlContents=try?  Data(contentsOf: url)
                 
@@ -62,14 +58,29 @@ class ImagesViewController: UIViewController {
     //clicking functions
     
     @IBAction func onReloadClicked(_ sender: UIButton) {
-        //call the api for random url
-        //https://api.thecatapi.com/v1/images/search
-        imageURL=URL(string: "https://cdn2.thecatapi.com/images/5kc.png")
+        fetchImageURL()
     }
-//    "breeds": [],
-//        "height": 333,
-//        "id": "d9f",
-//        "url": "https://cdn2.thecatapi.com/images/d9f.jpg",
-//        "width": 500
     
-}
+    func fetchImageURL() {
+        //call the api for random url
+        AF.request("https://api.thecatapi.com/v1/images/search",encoding: JSONEncoding.default)
+            .responseJSON { response in
+                if let status = response.response?.statusCode {
+                    switch(status){
+                    case 200:
+                        //to get JSON return value
+                        if let result = response.value {
+                            let images = result as! [NSDictionary]
+                            if !images.isEmpty{
+                                let url = images[0].object(forKey: "url")!
+                                self.imageURL=URL(string: url as! String)
+                            }
+                        }
+                    default:
+                        print("error with response status: \(status)")
+                    }
+                }
+                
+            }
+    }
+}//end of class
