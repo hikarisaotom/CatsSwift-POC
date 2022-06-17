@@ -66,5 +66,13 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
         }
         return cell
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? BreedDetailsViewController, let index = BreedsCollectionView.indexPathsForSelectedItems?.first{
+            dest.breed=catBreeds[index.row]
+        }
+            
+    }
 }//end of class
 

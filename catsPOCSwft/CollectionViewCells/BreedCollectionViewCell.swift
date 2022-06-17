@@ -12,4 +12,6 @@ class BreedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var breedName: UILabel!
     @IBOutlet weak var breedImage: UIImageView!
     var  breed:Breed?=nil
+    
+    
 }

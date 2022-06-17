@@ -83,4 +83,10 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
             
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? CategoryDetailsViewController, let index = CategoriesViewCollection.indexPathsForSelectedItems?.first{
+            dest.category=imagesCategories[index.row]
+        }
+    }
 }//end of class
