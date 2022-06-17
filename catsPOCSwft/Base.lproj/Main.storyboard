@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,10 +17,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-Xs-cQa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xys-fL-whl">
+                                    <size key="itemSize" width="400" height="400"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="n2D-7d-qyU" customClass="BreedCollectionViewCell" customModule="catsPOCSwft" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="0.0" width="400" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vcl-z1-YQJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-zV-UxJ">
+                                                    <rect key="frame" x="1" y="0.0" width="380" height="400"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BREED NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-g2-xta">
+                                                    <rect key="frame" x="8" y="371" width="257" height="21"/>
+                                                    <color key="backgroundColor" white="0.86339937586362669" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KKt-g2-xta" firstAttribute="leading" secondItem="vcl-z1-YQJ" secondAttribute="leading" constant="80" id="2el-cC-hMC"/>
+                                                <constraint firstAttribute="bottom" secondItem="5cS-zV-UxJ" secondAttribute="bottom" id="8PB-9o-B6c"/>
+                                                <constraint firstItem="5cS-zV-UxJ" firstAttribute="top" secondItem="vcl-z1-YQJ" secondAttribute="top" id="KzG-NE-IyS"/>
+                                                <constraint firstAttribute="trailing" secondItem="5cS-zV-UxJ" secondAttribute="trailing" id="jVV-Sk-UCg"/>
+                                                <constraint firstItem="KKt-g2-xta" firstAttribute="leading" secondItem="vcl-z1-YQJ" secondAttribute="leading" id="nIt-G4-Z5P"/>
+                                                <constraint firstItem="KKt-g2-xta" firstAttribute="bottom" secondItem="vcl-z1-YQJ" secondAttribute="bottom" id="neg-mh-oxZ"/>
+                                                <constraint firstItem="5cS-zV-UxJ" firstAttribute="leading" secondItem="vcl-z1-YQJ" secondAttribute="leading" id="xXU-fu-JYN"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="breedImage" destination="5cS-zV-UxJ" id="Swc-jF-UVt"/>
+                                            <outlet property="breedName" destination="KKt-g2-xta" id="H5z-Xb-CDq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rXN-Xs-cQa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TzC-GR-AlM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rXN-Xs-cQa" secondAttribute="trailing" id="n96-eY-Mud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rXN-Xs-cQa" secondAttribute="bottom" id="xLH-UJ-USs"/>
+                            <constraint firstItem="rXN-Xs-cQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yBE-X2-eFE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Breeds" image="1.1" id="KE8-6l-Ild"/>
+                    <connections>
+                        <outlet property="BreedsCollectionView" destination="rXN-Xs-cQa" id="CH7-pg-rUf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +159,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pak-9P-W9u" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Px5-GS-VZw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -147,7 +206,7 @@
         <image name="3.1" width="30" height="30"/>
         <image name="4.1" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
