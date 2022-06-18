@@ -9,8 +9,9 @@ import Foundation
 
 
 typealias Categories = [Category]
-
 struct Category:Decodable {
     let id: Int
     let name: String
 }
+
+

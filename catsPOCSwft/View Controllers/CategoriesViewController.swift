@@ -48,7 +48,7 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = CategoriesViewCollection.dequeueReusableCell(withReuseIdentifier: "customCategoryCell", for: indexPath) as! CategoriesCollectionViewCell
         let selectedCategory=imagesCategories[indexPath.row]
-        let parameters = APIParameters(category_ids: selectedCategory.id)
+        let parameters = APIParameters(category_ids: selectedCategory.id,limit: 1)
        
         AF.request("https://api.thecatapi.com/v1/images/search",
                    parameters: parameters,

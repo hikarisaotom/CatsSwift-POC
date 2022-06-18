@@ -13,5 +13,6 @@ struct API {
 }
 struct APIParameters: Encodable {
     let category_ids: Int
+    let limit:Int?
 }
 
