@@ -7,6 +7,7 @@ target 'catsPOCSwft' do
 
   # Pods for catsPOCSwft
   pod 'Alamofire'
+  pod 'lottie-ios'
   
   target 'catsPOCSwftTests' do
     inherit! :search_paths

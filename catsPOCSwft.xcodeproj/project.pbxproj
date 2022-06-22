@@ -18,6 +18,11 @@
 		725EE3CD285A9BA50066B6D0 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725EE3CC285A9BA50066B6D0 /* ImagesViewController.swift */; };
 		725EE3CF285A9BB80066B6D0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725EE3CE285A9BB80066B6D0 /* VideoViewController.swift */; };
 		725EE3D3285AAE8D0066B6D0 /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725EE3D2285AAE8D0066B6D0 /* Breeds.swift */; };
+		7262F845286278AE00B08DC0 /* pagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262F844286278AE00B08DC0 /* pagerViewController.swift */; };
+		7262F84A2862898000B08DC0 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262F8492862898000B08DC0 /* LottieViewController.swift */; };
+		7262F84C28628DF800B08DC0 /* slide-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7262F84B28628DF800B08DC0 /* slide-1.json */; };
+		7262F84F286290D800B08DC0 /* slide-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7262F84D286290D800B08DC0 /* slide-3.json */; };
+		7262F852286290E800B08DC0 /* slide-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7262F851286290E700B08DC0 /* slide-2.json */; };
 		728F5417285A86CE0083268F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728F5416285A86CE0083268F /* AppDelegate.swift */; };
 		728F5419285A86CE0083268F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728F5418285A86CE0083268F /* SceneDelegate.swift */; };
 		728F541B285A86CE0083268F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728F541A285A86CE0083268F /* HomeScreenViewController.swift */; };
@@ -63,6 +68,11 @@
 		725EE3CC285A9BA50066B6D0 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		725EE3CE285A9BB80066B6D0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		725EE3D2285AAE8D0066B6D0 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
+		7262F844286278AE00B08DC0 /* pagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagerViewController.swift; sourceTree = "<group>"; };
+		7262F8492862898000B08DC0 /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LottieViewController.swift; path = /Users/iconic/Desktop/catsPOCSwft/LottieViewController.swift; sourceTree = "<absolute>"; };
+		7262F84B28628DF800B08DC0 /* slide-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "slide-1.json"; sourceTree = "<group>"; };
+		7262F84D286290D800B08DC0 /* slide-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "slide-3.json"; sourceTree = "<group>"; };
+		7262F851286290E700B08DC0 /* slide-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "slide-2.json"; sourceTree = "<group>"; };
 		728F5413285A86CE0083268F /* catsPOCSwft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catsPOCSwft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		728F5416285A86CE0083268F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		728F5418285A86CE0083268F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +168,25 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		7262F8532862946800B08DC0 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				7262F84B28628DF800B08DC0 /* slide-1.json */,
+				7262F84D286290D800B08DC0 /* slide-3.json */,
+				7262F851286290E700B08DC0 /* slide-2.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
+		7262F8542862948A00B08DC0 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				7262F8492862898000B08DC0 /* LottieViewController.swift */,
+				7262F844286278AE00B08DC0 /* pagerViewController.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
 		728F540A285A86CE0083268F = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +216,8 @@
 				728F5418285A86CE0083268F /* SceneDelegate.swift */,
 				728F541A285A86CE0083268F /* HomeScreenViewController.swift */,
 				728F541C285A86CE0083268F /* Main.storyboard */,
+				7262F8532862946800B08DC0 /* Lotties */,
+				7262F8542862948A00B08DC0 /* Pager */,
 				7220A166285D1F24003E5436 /* Details */,
 				725EE3D1285A9C4D0066B6D0 /* View Controllers */,
 				72C63145285C006100E52F00 /* Cells */,
@@ -344,9 +375,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7262F852286290E800B08DC0 /* slide-2.json in Resources */,
 				728F5423285A86D00083268F /* LaunchScreen.storyboard in Resources */,
+				7262F84F286290D800B08DC0 /* slide-3.json in Resources */,
 				728F5420285A86D00083268F /* Assets.xcassets in Resources */,
 				728F541E285A86CE0083268F /* Main.storyboard in Resources */,
+				7262F84C28628DF800B08DC0 /* slide-1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,8 +508,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7262F84A2862898000B08DC0 /* LottieViewController.swift in Sources */,
 				725EE3CD285A9BA50066B6D0 /* ImagesViewController.swift in Sources */,
 				725EE3CF285A9BB80066B6D0 /* VideoViewController.swift in Sources */,
+				7262F845286278AE00B08DC0 /* pagerViewController.swift in Sources */,
 				7220A168285D2E8F003E5436 /* CategoryDetailsViewController.swift in Sources */,
 				728F541B285A86CE0083268F /* HomeScreenViewController.swift in Sources */,
 				725EE3C9285A9B820066B6D0 /* BreedsViewController.swift in Sources */,
