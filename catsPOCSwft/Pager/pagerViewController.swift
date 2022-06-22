@@ -45,7 +45,8 @@ class pagerViewController: UIPageViewController,UIPageViewControllerDelegate,UIP
         let previousIndex = viewControllerIndex-1
         
         guard previousIndex >= 0 else{
-            return orderViewControllers.last
+//            return orderViewControllers.last
+            return nil
         }
         
         guard orderViewControllers.count>previousIndex else{
@@ -63,7 +64,8 @@ class pagerViewController: UIPageViewController,UIPageViewControllerDelegate,UIP
         
         guard orderViewControllers.count != nextIndex  else{
             
-            return orderViewControllers.first
+//            return orderViewControllers.first
+            return nil
         }
         
         guard orderViewControllers.count>nextIndex else{

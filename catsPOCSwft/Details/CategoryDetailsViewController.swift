@@ -10,6 +10,7 @@ import Alamofire
 class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource  {
     @IBOutlet weak var lblTitleDescription: UILabel!
     
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     @IBOutlet weak var categoryImagesCollectionView: UICollectionView!
     
     private var images=[URL](){
@@ -18,6 +19,7 @@ class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource 
             print("Images loaded")
             DispatchQueue.main.async {
                 self.categoryImagesCollectionView.reloadData()
+                self.loadingSpinner.stopAnimating()
             }
         }
     }
@@ -39,11 +41,13 @@ class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource 
         let cell = categoryImagesCollectionView.dequeueReusableCell(withReuseIdentifier: "imageCategoryDetail", for: indexPath) as! CategoryDetailsCollectionViewCell
         let image=images[indexPath.row]
         
+        cell.loadingSpinner.startAnimating()
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let urlContents=try?  Data(contentsOf: image)
             DispatchQueue.main.async {
                 if let imageData=urlContents{
                     cell.imageCategory.image=UIImage(data:imageData)
+                    cell.loadingSpinner.stopAnimating()
                 }
             }
         }
@@ -55,6 +59,7 @@ class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource 
     private func fetchImages(){
         let parameters = APIParameters(category_ids: category.id, limit:20)
         print("starting....... for category \(category.id) \(category.name)")
+        loadingSpinner.startAnimating()
         AF.request("https://api.thecatapi.com/v1/images/search",
                    parameters: parameters,
                    headers: API.headers

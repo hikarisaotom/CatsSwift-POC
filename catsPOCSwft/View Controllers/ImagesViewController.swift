@@ -14,6 +14,7 @@ class ImagesViewController: UIViewController {
     
     @IBOutlet weak var catImage: UIImageView!
     
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
     var imageURL:URL?{
         didSet{
@@ -38,14 +39,14 @@ class ImagesViewController: UIViewController {
     
     private func loadImage(){
         if let url=imageURL{
-            //            spinner.startAnimating()
+            loadingSpinner.startAnimating()
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 let urlContents=try?  Data(contentsOf: url)
                 
                 DispatchQueue.main.async {
                     if let imageData=urlContents,url==self?.imageURL{
                         self?.catImage.image=UIImage(data:imageData)
-                        
+                        self?.loadingSpinner.stopAnimating()
                     }
                 }
             }

@@ -11,4 +11,6 @@ class CategoryDetailsCollectionViewCell: UICollectionViewCell {
     
 
     @IBOutlet weak var imageCategory: UIImageView!
+    
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
 }

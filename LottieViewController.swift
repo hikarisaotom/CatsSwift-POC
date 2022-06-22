@@ -15,6 +15,7 @@ class LottieViewController: UIViewController {
 
     @IBOutlet weak var lblDescription: UILabel!
     
+    @IBOutlet weak var btnGoToTabs: UIButton!
     var descriptiontext:String!
     var lottieName:String!
     
@@ -31,6 +32,9 @@ class LottieViewController: UIViewController {
         // 4. Play animation
         lottieView.play()
         lblDescription?.text=descriptiontext
+        if(lottieName.contains("3")){
+            btnGoToTabs.isHidden=false
+        }
     }
     
     

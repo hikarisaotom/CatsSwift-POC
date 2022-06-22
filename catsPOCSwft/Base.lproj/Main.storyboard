@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BreedsViewController" customModule="catsPOCSwft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-Xs-cQa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xys-fL-whl">
                                     <size key="itemSize" width="400" height="400"/>
@@ -27,6 +27,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="ufi-h2-yms">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="n2D-7d-qyU" customClass="BreedCollectionViewCell" customModule="catsPOCSwft" customModuleProvider="target">
                                         <rect key="frame" x="7" y="0.0" width="400" height="400"/>
@@ -250,11 +255,11 @@
             <objects>
                 <viewController id="fGJ-1o-qUU" customClass="CategoryDetailsViewController" customModule="catsPOCSwft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aSM-CV-Fh0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy the pictures of cats in : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-Mq-JAS">
-                                <rect key="frame" x="10" y="98" width="394" height="24"/>
+                                <rect key="frame" x="10" y="66" width="394" height="24"/>
                                 <color key="backgroundColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="0.83286694660000005" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="0.83286694660000005" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -262,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-F9-A2O">
-                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="742"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZAE-Im-POX">
                                     <size key="itemSize" width="414" height="400"/>
@@ -270,6 +275,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="Vhj-UJ-VGA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCategoryDetail" id="BNp-NK-d6F" customClass="CategoryDetailsCollectionViewCell" customModule="catsPOCSwft" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -281,6 +291,11 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.2" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-5Z-8Es">
                                                     <rect key="frame" x="5" y="0.0" width="404" height="395"/>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="g8J-2M-mG5">
+                                                    <rect key="frame" x="0.0" y="-171" width="414" height="742"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.75" alpha="0.48718969080000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -292,6 +307,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="imageCategory" destination="lfp-5Z-8Es" id="yCc-qI-Sbe"/>
+                                            <outlet property="loadingSpinner" destination="g8J-2M-mG5" id="ZbX-GE-uyJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -316,6 +332,7 @@
                     <connections>
                         <outlet property="categoryImagesCollectionView" destination="PZH-F9-A2O" id="p0E-Xf-GOZ"/>
                         <outlet property="lblTitleDescription" destination="kjb-Mq-JAS" id="FxT-xe-wK2"/>
+                        <outlet property="loadingSpinner" destination="Vhj-UJ-VGA" id="jyX-ul-51B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abj-wy-5XJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -327,11 +344,11 @@
             <objects>
                 <viewController id="dec-Ib-EyP" customClass="CategoriesViewController" customModule="catsPOCSwft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a0l-Zr-aOk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-cA-t4d">
-                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <rect key="frame" x="20" y="56" width="374" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HuM-vu-ktH">
                                     <size key="itemSize" width="180" height="200"/>
@@ -399,20 +416,20 @@
             <objects>
                 <viewController id="CGm-UB-814" customClass="ImagesViewController" customModule="catsPOCSwft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZU-BV-Q8t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you want to see more images just click on the reload option!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="957-2B-hT1">
-                                <rect key="frame" x="5" y="740.5" width="404" height="57.5"/>
+                                <rect key="frame" x="5" y="720.5" width="404" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-pZ-vsq">
-                                <rect key="frame" x="5" y="49" width="404" height="689"/>
+                                <rect key="frame" x="5" y="5" width="404" height="713"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6z6-yb-K4t">
-                                <rect key="frame" x="20" y="64" width="78" height="83"/>
+                                <rect key="frame" x="20" y="20" width="78" height="83"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="🔄">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
@@ -421,6 +438,11 @@
                                     <action selector="onReloadClicked:" destination="CGm-UB-814" eventType="touchUpInside" id="37i-nd-fqw"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Phz-wF-yWO">
+                                <rect key="frame" x="197" y="351" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="562-VL-jsN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -442,6 +464,7 @@
                         <outlet property="btnReloadImage" destination="6z6-yb-K4t" id="jIM-Cb-iD8"/>
                         <outlet property="catImage" destination="uIu-pZ-vsq" id="1PU-RN-f1j"/>
                         <outlet property="lblMessage" destination="957-2B-hT1" id="Ugi-71-yWS"/>
+                        <outlet property="loadingSpinner" destination="Phz-wF-yWO" id="Dsu-Ng-o4b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XC5-4R-tqh" sceneMemberID="firstResponder"/>
@@ -451,9 +474,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Ffv-6O-c6g">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pak-9P-W9u" sceneMemberID="viewController">
+                <tabBarController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="pak-9P-W9u" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pFz-ik-BHG"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Px5-GS-VZw">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -468,14 +492,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLh-cT-Iqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="-597"/>
+            <point key="canvasLocation" x="634.78260869565224" y="-597.32142857142856"/>
         </scene>
         <!--Video-->
         <scene sceneID="Ohh-KI-AF8">
             <objects>
                 <viewController id="7Jb-HT-KAx" customClass="VideoViewController" customModule="catsPOCSwft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yT8-P4-dLt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y83-av-jlG">
@@ -501,49 +525,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="vqL-KV-Z29" customClass="pagerViewController" customModule="catsPOCSwft" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esU-Tx-bCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1419" y="-1338"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mVD-ZG-wRi">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gp3-tN-wxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="thirdPage" id="wt6-Ur-eZZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iKe-CY-Ska">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVt-it-BB4">
-                                <rect key="frame" x="204" y="816" width="190" height="31"/>
-                                <color key="backgroundColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Let's Go">
-                                    <color key="baseBackgroundColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-O5-XNw">
-                                <rect key="frame" x="50" y="144" width="314" height="175.5"/>
-                                <color key="tintColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <string key="text">Besides of learning you can also have fun!, we all can agree that watching funny cat pictures is relaxing!, guess what? you can also do that in here!You can either see them divided by category or just have a random picture!.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="yQf-Rr-8S8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="w8c-O5-XNw" firstAttribute="top" secondItem="yQf-Rr-8S8" secondAttribute="top" constant="100" id="5X8-oG-79I"/>
-                            <constraint firstItem="w8c-O5-XNw" firstAttribute="leading" secondItem="yQf-Rr-8S8" secondAttribute="leading" constant="50" id="87d-TA-afr"/>
-                            <constraint firstItem="yQf-Rr-8S8" firstAttribute="bottom" secondItem="AVt-it-BB4" secondAttribute="bottom" constant="15" id="Ei6-CF-Bco"/>
-                            <constraint firstItem="AVt-it-BB4" firstAttribute="leading" secondItem="yQf-Rr-8S8" secondAttribute="leading" constant="204" id="RRb-lV-wr0"/>
-                            <constraint firstItem="yQf-Rr-8S8" firstAttribute="trailing" secondItem="AVt-it-BB4" secondAttribute="trailing" constant="20" id="itm-DU-qDS"/>
-                            <constraint firstItem="yQf-Rr-8S8" firstAttribute="trailing" secondItem="w8c-O5-XNw" secondAttribute="trailing" constant="50" id="wee-ra-tag"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="hge-Lx-ru4"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1141" y="-597"/>
+            <point key="canvasLocation" x="-184" y="-1288"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2aH-7o-YMO">
@@ -606,13 +588,16 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="slide-1"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMg-fI-sAS">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMg-fI-sAS">
                                 <rect key="frame" x="250" y="811" width="144" height="31"/>
                                 <color key="backgroundColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Let's Go">
                                     <color key="baseBackgroundColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pak-9P-W9u" kind="showDetail" id="O0q-D4-WpG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QaN-eX-ggu"/>
@@ -631,14 +616,16 @@
                             <constraint firstItem="QaN-eX-ggu" firstAttribute="trailing" secondItem="uMg-fI-sAS" secondAttribute="trailing" constant="20" id="kmY-9L-YRA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aho-N6-mqS"/>
                     <connections>
+                        <outlet property="btnGoToTabs" destination="uMg-fI-sAS" id="gyh-5L-23l"/>
                         <outlet property="lblDescription" destination="VfZ-qh-z07" id="5dD-Ng-j1p"/>
                         <outlet property="lottieView" destination="6Zv-2h-CVR" id="rv2-gn-6iF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5O-Ua-jWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2139" y="-589"/>
+            <point key="canvasLocation" x="-184.05797101449278" y="-597.32142857142856"/>
         </scene>
         <!--Breeds-->
         <scene sceneID="eEi-v1-Sdc">
@@ -647,7 +634,7 @@
                     <tabBarItem key="tabBarItem" title="Breeds" image="1.1" id="KE8-6l-Ild"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QW1-nY-WB3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -666,7 +653,7 @@
                     <tabBarItem key="tabBarItem" title="Categories" image="2.1" id="QiK-kL-DDK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Pd-qX-wgx">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -684,7 +671,7 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="eiM-UH-fzF"/>
-        <segue reference="mby-VA-0RY"/>
+        <segue reference="Hiq-Tk-yOc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1.1" width="30" height="30"/>
