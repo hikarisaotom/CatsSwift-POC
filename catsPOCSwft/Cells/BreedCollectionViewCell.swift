@@ -9,6 +9,7 @@ import UIKit
 
 class BreedCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     @IBOutlet weak var breedName: UILabel!
     @IBOutlet weak var breedImage: UIImageView!
     var  breed:Breed?=nil

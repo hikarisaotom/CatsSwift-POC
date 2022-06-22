@@ -9,6 +9,8 @@ import UIKit
 
 class BreedDetailsViewController: UIViewController {
     var breed:Breed!
+    
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     @IBOutlet weak var lblName: UILabel!
     
     @IBOutlet weak var lblAlternativeName: UILabel!
@@ -22,6 +24,7 @@ class BreedDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingSpinner.startAnimating()
         lblName.text=breed.name
         lblAlternativeName.text=(breed.altNames != nil) ? breed.altNames : ""
         lblDescription.text=(breed.description != nil) ? breed.description : "N/A"
@@ -34,6 +37,7 @@ class BreedDetailsViewController: UIViewController {
                 DispatchQueue.main.async {
                     if let imageData=urlContents{
                         self?.imgBreed.image=UIImage(data:imageData)
+                        self?.loadingSpinner.stopAnimating()
 //                        print("loading image")
                     }
                 }

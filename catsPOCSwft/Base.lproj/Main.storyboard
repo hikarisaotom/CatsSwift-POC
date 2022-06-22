@@ -51,6 +51,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="E5v-WQ-TAP">
+                                                    <rect key="frame" x="190" y="190" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KKt-g2-xta" firstAttribute="leading" secondItem="vcl-z1-YQJ" secondAttribute="leading" constant="80" id="2el-cC-hMC"/>
@@ -65,6 +70,7 @@
                                         <connections>
                                             <outlet property="breedImage" destination="5cS-zV-UxJ" id="Swc-jF-UVt"/>
                                             <outlet property="breedName" destination="KKt-g2-xta" id="H5z-Xb-CDq"/>
+                                            <outlet property="loadingSpinner" destination="E5v-WQ-TAP" id="p0s-z0-Mbu"/>
                                             <segue destination="vIW-k1-UOE" kind="show" id="mby-VA-0RY"/>
                                         </connections>
                                     </collectionViewCell>
@@ -83,6 +89,7 @@
                     <navigationItem key="navigationItem" id="fcq-k4-7Hh"/>
                     <connections>
                         <outlet property="BreedsCollectionView" destination="rXN-Xs-cQa" id="CH7-pg-rUf"/>
+                        <outlet property="loadingSpinner" destination="ufi-h2-yms" id="clU-Jq-nwz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -189,6 +196,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-8p-kY3">
+                                        <rect key="frame" x="181" y="134" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -244,6 +256,7 @@
                         <outlet property="lblLifeSpan" destination="qXa-Sk-fAO" id="afo-7W-CTD"/>
                         <outlet property="lblName" destination="HUL-iD-gTI" id="4Al-6O-MZM"/>
                         <outlet property="lblOrigin" destination="aEV-8f-mER" id="5li-a2-r0P"/>
+                        <outlet property="loadingSpinner" destination="zwL-8p-kY3" id="DrJ-1q-9Zo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8l-23-fVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -356,6 +369,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="8Qw-vd-zWe">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="757"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCategoryCell" id="VAf-CN-0JC" customClass="CategoriesCollectionViewCell" customModule="catsPOCSwft" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
@@ -373,6 +391,11 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.2" translatesAutoresizingMaskIntoConstraints="NO" id="L5M-kI-uHH">
                                                     <rect key="frame" x="5" y="35" width="170" height="160"/>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2gT-dq-cXq">
+                                                    <rect key="frame" x="71" y="90" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.75" alpha="0.48718969079832369" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -387,6 +410,7 @@
                                         <connections>
                                             <outlet property="categoryImage" destination="L5M-kI-uHH" id="CxL-kg-1fR"/>
                                             <outlet property="categoryTitle" destination="fTp-2j-5Bj" id="epn-Ny-kGZ"/>
+                                            <outlet property="loadingSpinner" destination="2gT-dq-cXq" id="Fhn-1c-pJa"/>
                                             <segue destination="fGJ-1o-qUU" kind="show" id="eiM-UH-fzF"/>
                                         </connections>
                                     </collectionViewCell>
@@ -405,6 +429,7 @@
                     <navigationItem key="navigationItem" id="X6Q-sh-jm8"/>
                     <connections>
                         <outlet property="CategoriesViewCollection" destination="UQb-cA-t4d" id="XfE-OY-pgg"/>
+                        <outlet property="loadingSpinner" destination="8Qw-vd-zWe" id="RcA-Cx-CnA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUT-QJ-iif" sceneMemberID="firstResponder"/>

@@ -16,6 +16,7 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
             print("breeds loaded")
             DispatchQueue.main.async {
                 self.BreedsCollectionView.reloadData()
+                self.loadingSpinner.stopAnimating()
             }
         }
     }
@@ -23,6 +24,7 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
     
     @IBOutlet weak var BreedsCollectionView: UICollectionView!
     
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
     }
     private func fetchBreeds(){
         print("fetching.....")
+        loadingSpinner.startAnimating()
         AF.request("https://api.thecatapi.com/v1/breeds",headers: API.headers).responseDecodable(of: Breeds.self) { response in
             if let breeds = response.value{
                 self.catBreeds = breeds
@@ -52,12 +55,14 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
         
         cell.breedName.text = selectedBreed.name.capitalized
         cell.breed=selectedBreed
+        cell.loadingSpinner.startAnimating()
         if let urlString=selectedBreed.image?.url, let imageUrl=URL(string: urlString ){
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 let urlContents=try?  Data(contentsOf: imageUrl)
                 DispatchQueue.main.async {
                     if let imageData=urlContents{
                         cell.breedImage.image=UIImage(data:imageData)
+                        cell.loadingSpinner.stopAnimating()
 //                        print("loading image")
                     }
                 }

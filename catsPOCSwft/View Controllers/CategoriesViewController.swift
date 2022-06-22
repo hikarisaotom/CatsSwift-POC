@@ -10,12 +10,14 @@ import Alamofire
 
 class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
     
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     private var imagesCategories=Categories(){
         didSet{
             //TODO: reload the collectionview
             print("Categories loaded")
             DispatchQueue.main.async {
                 self.CategoriesViewCollection.reloadData()
+                self.loadingSpinner.stopAnimating()
             }
         }
     }
@@ -30,6 +32,7 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
     }
     private func FetchCategories(){
         print("fetching.....")
+        loadingSpinner.startAnimating()
         AF.request("https://api.thecatapi.com/v1/categories",headers: API.headers).responseDecodable(of: Categories.self) { response in
             if let categories = response.value{
                 self.imagesCategories = categories
@@ -49,7 +52,7 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
         let cell = CategoriesViewCollection.dequeueReusableCell(withReuseIdentifier: "customCategoryCell", for: indexPath) as! CategoriesCollectionViewCell
         let selectedCategory=imagesCategories[indexPath.row]
         let parameters = APIParameters(category_ids: selectedCategory.id,limit: 1)
-       
+        cell.loadingSpinner.startAnimating()
         AF.request("https://api.thecatapi.com/v1/images/search",
                    parameters: parameters,
                    headers: API.headers
@@ -75,6 +78,8 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
                 DispatchQueue.main.async {
                     if let imageData=urlContents{
                         cell.categoryImage.image=UIImage(data:imageData)
+                        
+                            cell.loadingSpinner.stopAnimating()
                        
                        
                     }
