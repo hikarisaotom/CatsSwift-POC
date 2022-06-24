@@ -150,6 +150,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		721119902865458A00CF33CD /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				728F5416285A86CE0083268F /* AppDelegate.swift */,
+				728F5418285A86CE0083268F /* SceneDelegate.swift */,
+				728F541A285A86CE0083268F /* HomeScreenViewController.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
 		7220A166285D1F24003E5436 /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,20 +224,18 @@
 		728F5415285A86CE0083268F /* catsPOCSwft */ = {
 			isa = PBXGroup;
 			children = (
-				728F5416285A86CE0083268F /* AppDelegate.swift */,
-				728F5418285A86CE0083268F /* SceneDelegate.swift */,
-				728F541A285A86CE0083268F /* HomeScreenViewController.swift */,
+				728F5421285A86D00083268F /* LaunchScreen.storyboard */,
 				728F541C285A86CE0083268F /* Main.storyboard */,
+				728F541F285A86D00083268F /* Assets.xcassets */,
+				7211198E286542A300CF33CD /* Helpers.swift */,
+				721119902865458A00CF33CD /* Default */,
 				7262F8532862946800B08DC0 /* Lotties */,
 				7262F8542862948A00B08DC0 /* Pager */,
 				7220A166285D1F24003E5436 /* Details */,
 				725EE3D1285A9C4D0066B6D0 /* View Controllers */,
 				72C63145285C006100E52F00 /* Cells */,
-				728F541F285A86D00083268F /* Assets.xcassets */,
-				728F5421285A86D00083268F /* LaunchScreen.storyboard */,
 				728F5424285A86D00083268F /* Info.plist */,
 				72C63148285C01B000E52F00 /* Interfaces */,
-				7211198E286542A300CF33CD /* Helpers.swift */,
 			);
 			path = catsPOCSwft;
 			sourceTree = "<group>";
@@ -709,6 +717,7 @@
 				DEVELOPMENT_TEAM = G33X3RXKS7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = catsPOCSwft/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cats! (iOS)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -739,6 +748,7 @@
 				DEVELOPMENT_TEAM = G33X3RXKS7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = catsPOCSwft/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cats! (iOS)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
