@@ -32,6 +32,7 @@ class LottieViewController: UIViewController {
         // 4. Play animation
         lottieView.play()
         lblDescription?.text=descriptiontext
+        lottieView.backgroundBehavior = .pauseAndRestore
         if(lottieName.contains("3")){
             btnGoToTabs.isHidden=false
         }

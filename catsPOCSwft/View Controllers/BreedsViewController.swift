@@ -28,6 +28,7 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Breeds"
         fetchBreeds()
         BreedsCollectionView.dataSource = self
     }

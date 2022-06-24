@@ -27,6 +27,7 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Picture Categories"
         FetchCategories()
         CategoriesViewCollection.dataSource = self
     }

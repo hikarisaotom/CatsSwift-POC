@@ -25,6 +25,7 @@ class BreedDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingSpinner.startAnimating()
+        self.title = breed.name.capitalized
         lblName.text=breed.name
         lblAlternativeName.text=(breed.altNames != nil) ? breed.altNames : ""
         lblDescription.text=(breed.description != nil) ? breed.description : "N/A"

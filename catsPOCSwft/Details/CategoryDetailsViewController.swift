@@ -29,6 +29,7 @@ class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchImages()
+        self.title = category.name.capitalized
         lblTitleDescription.text = "Enjoy the pictures of cats in : \(category.name)"
         categoryImagesCollectionView.dataSource = self
     }
