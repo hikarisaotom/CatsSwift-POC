@@ -28,6 +28,7 @@ class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchImages()
         self.title = category.name.capitalized
         lblTitleDescription.text = "Enjoy the pictures of cats in : \(category.name)"
@@ -41,7 +42,7 @@ class CategoryDetailsViewController:UIViewController,UICollectionViewDataSource 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoryImagesCollectionView.dequeueReusableCell(withReuseIdentifier: "imageCategoryDetail", for: indexPath) as! CategoryDetailsCollectionViewCell
         let image=images[indexPath.row]
-        
+        Helpers.putShadow(cell: cell)
         cell.loadingSpinner.startAnimating()
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let urlContents=try?  Data(contentsOf: image)

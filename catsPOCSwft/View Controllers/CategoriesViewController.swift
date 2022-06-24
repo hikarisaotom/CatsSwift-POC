@@ -53,6 +53,7 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
         let cell = CategoriesViewCollection.dequeueReusableCell(withReuseIdentifier: "customCategoryCell", for: indexPath) as! CategoriesCollectionViewCell
         let selectedCategory=imagesCategories[indexPath.row]
         let parameters = APIParameters(category_ids: selectedCategory.id,limit: 1)
+        Helpers.putShadow(cell: cell)
         cell.loadingSpinner.startAnimating()
         AF.request("https://api.thecatapi.com/v1/images/search",
                    parameters: parameters,
@@ -79,7 +80,8 @@ class CategoriesViewController:  UIViewController,UICollectionViewDataSource{
                 DispatchQueue.main.async {
                     if let imageData=urlContents{
                         cell.categoryImage.image=UIImage(data:imageData)
-                        
+                        cell.categoryImage.layer.cornerRadius = 8.0
+                        cell.categoryImage.clipsToBounds = true
                             cell.loadingSpinner.stopAnimating()
                        
                        

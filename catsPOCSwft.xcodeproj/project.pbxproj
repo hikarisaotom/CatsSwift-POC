@@ -10,6 +10,7 @@
 		16B56C0A63E8043FBAB9C26D /* Pods_catsPOCSwft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5680DFC70E2E162D5B5FD09B /* Pods_catsPOCSwft.framework */; };
 		16C1FAD936A12005D24AD83F /* Pods_catsPOCSwft_catsPOCSwftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880A00E8AE87324C4EFAD071 /* Pods_catsPOCSwft_catsPOCSwftUITests.framework */; };
 		6BBF0256CD884083F2C8E7E9 /* Pods_catsPOCSwftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D8F60E0160D1534940CCE0 /* Pods_catsPOCSwftTests.framework */; };
+		7211198F286542A300CF33CD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7211198E286542A300CF33CD /* Helpers.swift */; };
 		7220A165285D1F1E003E5436 /* BreedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7220A164285D1F1E003E5436 /* BreedDetailsViewController.swift */; };
 		7220A168285D2E8F003E5436 /* CategoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7220A167285D2E8F003E5436 /* CategoryDetailsViewController.swift */; };
 		7220A16A285D5317003E5436 /* CategoryDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7220A169285D5317003E5436 /* CategoryDetailsCollectionViewCell.swift */; };
@@ -60,6 +61,7 @@
 		2CE1A8D216EEA73DCF65E462 /* Pods-catsPOCSwft-catsPOCSwftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-catsPOCSwft-catsPOCSwftUITests.release.xcconfig"; path = "Target Support Files/Pods-catsPOCSwft-catsPOCSwftUITests/Pods-catsPOCSwft-catsPOCSwftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5680DFC70E2E162D5B5FD09B /* Pods_catsPOCSwft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_catsPOCSwft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D8F60E0160D1534940CCE0 /* Pods_catsPOCSwftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_catsPOCSwftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7211198E286542A300CF33CD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		7220A164285D1F1E003E5436 /* BreedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewController.swift; sourceTree = "<group>"; };
 		7220A167285D2E8F003E5436 /* CategoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsViewController.swift; sourceTree = "<group>"; };
 		7220A169285D5317003E5436 /* CategoryDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				728F5421285A86D00083268F /* LaunchScreen.storyboard */,
 				728F5424285A86D00083268F /* Info.plist */,
 				72C63148285C01B000E52F00 /* Interfaces */,
+				7211198E286542A300CF33CD /* Helpers.swift */,
 			);
 			path = catsPOCSwft;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				7220A168285D2E8F003E5436 /* CategoryDetailsViewController.swift in Sources */,
 				728F541B285A86CE0083268F /* HomeScreenViewController.swift in Sources */,
 				725EE3C9285A9B820066B6D0 /* BreedsViewController.swift in Sources */,
+				7211198F286542A300CF33CD /* Helpers.swift in Sources */,
 				72C63147285C008B00E52F00 /* CategoriesCollectionViewCell.swift in Sources */,
 				7220A165285D1F1E003E5436 /* BreedDetailsViewController.swift in Sources */,
 				725EE3D3285AAE8D0066B6D0 /* Breeds.swift in Sources */,

@@ -53,9 +53,11 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = BreedsCollectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! BreedCollectionViewCell
         let selectedBreed=catBreeds[indexPath.row]
-        
+        Helpers.putShadow(cell: cell)
         cell.breedName.text = selectedBreed.name.capitalized
         cell.breed=selectedBreed
+        cell.breedName.layer.masksToBounds = true
+        cell.breedName.layer.cornerRadius = 5
         cell.loadingSpinner.startAnimating()
         if let urlString=selectedBreed.image?.url, let imageUrl=URL(string: urlString ){
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
@@ -63,6 +65,8 @@ class BreedsViewController: UIViewController,UICollectionViewDataSource{
                 DispatchQueue.main.async {
                     if let imageData=urlContents{
                         cell.breedImage.image=UIImage(data:imageData)
+                        cell.breedImage.layer.cornerRadius = 8.0
+                        cell.breedImage.clipsToBounds = true
                         cell.loadingSpinner.stopAnimating()
 //                        print("loading image")
                     }

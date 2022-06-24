@@ -578,8 +578,8 @@
                                 <rect key="frame" x="250" y="808.5" width="144" height="33.5"/>
                                 <color key="backgroundColor" red="0.78416974539999995" green="0.68737147769999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Let's Go">
-                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Let's Go" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background"/>
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

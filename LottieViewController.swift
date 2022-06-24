@@ -35,6 +35,10 @@ class LottieViewController: UIViewController {
         lottieView.backgroundBehavior = .pauseAndRestore
         if(lottieName.contains("3")){
             btnGoToTabs.isHidden=false
+            btnGoToTabs.layer.cornerCurve = .continuous
+            btnGoToTabs.layer.cornerCurve = .continuous
+            btnGoToTabs.clipsToBounds = true
+            btnGoToTabs.layer.cornerRadius = 10.0
         }
     }
     

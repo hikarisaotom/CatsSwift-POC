@@ -13,5 +13,6 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryTitle: UILabel!
     
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
+ 
     
 }
