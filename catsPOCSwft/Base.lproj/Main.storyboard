@@ -513,6 +513,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.47585650730000001" green="0.15140888829999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.47585650730000001" green="0.15140888829999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Z1H-AX-Nol" kind="relationship" relationship="viewControllers" id="g78-FA-jl6"/>
@@ -620,7 +622,9 @@
         <scene sceneID="eEi-v1-Sdc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z1H-AX-Nol" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Breeds" image="1.1" id="KE8-6l-Ild"/>
+                    <tabBarItem key="tabBarItem" title="Breeds" image="1.1" id="KE8-6l-Ild">
+                        <color key="badgeColor" red="0.47585650730000001" green="0.15140888829999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QW1-nY-WB3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -639,7 +643,9 @@
         <scene sceneID="Mze-59-aXa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X5O-6Y-2fX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categories" image="2.1" id="QiK-kL-DDK"/>
+                    <tabBarItem key="tabBarItem" title="Categories" image="2.1" id="QiK-kL-DDK">
+                        <color key="badgeColor" red="0.47585650730000001" green="0.15140888829999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Pd-qX-wgx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -658,7 +664,9 @@
         <scene sceneID="Y3w-jv-nM8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hz-3F-BeV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Images" image="3.1" id="pqk-Rd-d7k"/>
+                    <tabBarItem key="tabBarItem" title="Images" image="3.1" id="pqk-Rd-d7k">
+                        <color key="badgeColor" red="0.47585650730000001" green="0.15140888829999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjf-gj-XGn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
